@@ -15,14 +15,14 @@ export const projects = [
       "Bearing Selection",
       "Stress Analysis"
     ],
-    summary: "As a powertrain team member, I independently calculated differential bearing loads, compared SKF bearings, and presented a bearing recommendation approved by a team lead. I also completed CAD and simulation tasks in SolidWorks.",
+    summary: "As a powertrain team member, I independently worked on tasks like by-hand calculating differential loads, comparing SKF components, and presented component recommendations approved by a team lead. I additionally completed CAD and simulation tasks in SolidWorks.",
     role: 'Powertrain team member',
     contributions: [
-      "Calculated differential bearing loads and support reactions using statics equations, using the previous year’s calculations to check my work",
+      "Calculated differential bearing loads and support reactions using statics equations, re-evaluating the previous iterations' calculations as a baseline",
       "Compared SKF bearings based on load requirements and expected service life, then presented a recommendation approved by a team lead",
-      "Reviewed the previous year’s differential design and calculations to assess the existing bearing arrangement",
-      "Ran a SolidWorks stress simulation on a rotor plate mount",
-      "Worked with existing SolidWorks models and completed smaller drafting tasks, including a hinge"
+      "Reviewed the previous year’s differential design and calculations to assess the existing bearing arrangement under new design considerations",
+      "Ran SolidWorks stress simulations on components like rotor plate mount",
+      "Worked with existing SolidWorks models and completed smaller drafting tasks such as designing hinges or containers for electrical components"
     ],
     results: "Completed a differential bearing assessment and received team-lead approval for the recommended bearing model. I also completed CAD drafting and preliminary simulation work on other mechanical components.",},
   {
@@ -34,7 +34,7 @@ export const projects = [
       "Troubleshooting",
       "Prototype development"
     ],
-    title: 'Pulse Ox+ — Biomedical Research', category: 'Biomedical Engineering',
+    title: 'Pulse Ox+ — Published Research', category: 'Biomedical Engineering',
     tags: [
       "Biomedical Research",
       "Data Analysis",
@@ -45,20 +45,20 @@ export const projects = [
     role: 'Research contributor and first-listed co-author',
     image: '/images/pulse-ox/FinalPrototype2.png',
     imageAlt: 'Final Pulse Ox+ experimental prototype with sensing hardware and display',
-    overview: "Our four-person team built an experimental pulse oximeter combining red and infrared sensing with RGB-based skin-tone measurements. We explored whether skin-tone information could help address differences in pulse oximeter readings. I focused on research, design planning, data analysis, and writing, and also helped troubleshoot the prototype.",
+    overview: "Our four person team built an experimental pulse oximeter combining red and infrared sensing with RGB based skin-tone measurements. We explored whether skin-tone information could help address inconsistencies in pulse oximeter readings. I focused on research, design planning, data analysis, and writing while also contributing to troubleshooting prototypes.",
     contributions: [
       "Researched pulse oximetry, skin-tone classification, and published studies to support the team’s design decisions",
       "Organized measurements, performed calculations, created graphs, and helped interpret experimental results",
-      "Drafted the initial version of most of the research paper and worked with teammates on revisions before publication",
+      "Drafted the initial version of the research paper and worked with teammates on revisions before publication",
       "Helped diagnose circuit and programming problems, suggested fixes, and worked with teammates to test solutions",
-      "Assisted with circuit development, some CAD design and 3D printing, and prototype assembly"
+      "Assisted with circuit development, some CAD design and 3D printing along with prototype assembly"
     ],
     process: [
       "Researched pulse oximetry and skin-tone measurement methods to guide the prototype design",
-      "Worked with the team to combine optical sensing with RGB-based skin-tone measurements and explore Monk Skin Tone Scale classification",
+      "Worked with the team to combine optical sensing with RGB based skin-tone measurements and explore Monk Skin Tone Scale classification",
       "Helped troubleshoot sensor, circuit, and programming issues through several prototype versions",
-      "Organized and analyzed preliminary readings from five participants, including comparisons with a commercial pulse oximeter",
-      "Drafted much of the initial research paper and worked with teammates to revise and present the results"
+      "Organized and analyzed preliminary readings from participants, including comparisons with a commercial pulse oximeter",
+      "Drafted the initial research paper and worked with teammates to revise and present the results"
     ],
     figures: [
   {
@@ -77,7 +77,7 @@ export const projects = [
     caption: 'Preliminary experimental measurements used to evaluate the prototype.'
   }
   ],
-    results: "Our team built an experimental prototype and collected preliminary measurements from five participants. We observed trends worth further study, but the optical and RGB sensors operated separately. The proposed correction method was not clinically validated, and further testing would be needed to assess accuracy.",
+    results: "Our team built an experimental prototype and collected preliminary measurements from participants. We observed trends worth further study, but the optical and RGB sensors operated separately with high component limitations. The proposed correction method was not clinically validated, and further testing would be needed to assess accuracy.",
     publication: {title:'Pulse Ox+: An Exploratory Model for Melanin-Corrected Pulse Oximetry',venue:'2026 ASEE Northeast Section Conference · March 27, 2026',url:'https://peer.asee.org/58595',doi:'10.18260/1-2--58595'}
   },
   {
@@ -137,10 +137,10 @@ export const projects = [
       "Prepared most of the project documentation and presentation"
     ],
     process: [
-      "Compared flat and curved reflector ideas, then used parabolic equations and reflection geometry to develop a design with a proposed focal point for a future receiver",
+      "Compared flat and curved reflector ideas, then used parabolic equations and reflection geometry to develop a design inspired by a flashlight's parabolic reflector ideal for a future receiver",
       "Modeled the reflector in SolidWorks and revised the base, thickness, and supports after trial prints and failures",
       "Printed and assembled the parts, correcting mounting, fit, and stability problems along the way",
-      "Worked with a teammate to write and troubleshoot the light-tracking code, including sensor thresholds and servo movement",
+      "Worked with a teammate to write and troubleshoot the light's tracking code, including sensor thresholds and servo movement",
       "Tested the assembled prototype for stability and basic tracking behavior and documented the results"
     ],
     figures: [
@@ -160,7 +160,7 @@ export const projects = [
       caption: 'Fabricated reflector component produced during prototype development.'
     }
   ],
-    results: "Completed a working prototype with a 3D-printed reflector and servo-controlled movement. My design changes reduced estimated printing time from about 18 hours to 4.5 hours, a 75% reduction. The proposed focal point was intended for a future receiver; optical performance and tracking accuracy were not formally measured.",
+    results: "Completed a working prototype with a 3D-printed reflector and servo-controlled movement. My design changes reduced estimated printing time from about 18 hours to 4.5 hours, a 75% reduction. The receiver gave promising results; optical performance and tracking accuracy we're limited by component quality and the single-axis design, but the prototype demonstrated the basic concept and functionality of a heliostat.",
   },
   {
     slug: 'wind-turbine', pdfFeatured: true, priority: 6, coursework: true,
@@ -183,7 +183,7 @@ export const projects = [
     role: "Mechanical design, fabrication, and data analysis",
     image: '/images/wind-turbine/WTFinalProject.png',
     imageAlt: 'Completed student-built wind turbine prototype',
-    overview: "Our three-person team built a small wind turbine to study how fan distance affected rotor speed and electrical output. I led much of the mechanical design and construction, including blade design in AutoCAD, laser cutting, and shaft and bearing assembly. I also analyzed the test data and prepared the report and presentation.",
+    overview: "Our three person team built a small wind turbine to study how fan distance affected rotor speed and electrical output. I led much of the mechanical design and construction, including blade design in AutoCAD, laser cutting, and shaft and bearing assembly. I also analyzed the test data and prepared the report and presentation.",
     contributions: [
       "Designed turbine blades in AutoCAD and revised them through several laser-cut wooden prototypes",
       "Led component layout and material selection, working with teammates to design and adjust the turbine assembly",

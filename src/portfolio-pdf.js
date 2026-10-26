@@ -44,7 +44,7 @@ function projectHTML(project, index) {
     ${section('Project synopsis', overview ? `<p>${esc(overview)}</p>` : '')}
     ${skillTags(project)}
     ${figuresHTML(project)}
-    ${section('My technical contributions', itemsHTML(project.contributions, false, project.contributionLabels))}
+    ${section('My Contributions', itemsHTML(project.contributions, false, project.contributionLabels))}
     ${section('Engineering process', itemsHTML(project.process, true))}
     ${section('Results and limitations', project.results ? `<p>${esc(project.results)}</p>` : '')}
     ${publication ? `<p class="pdf-publication"><strong>Publication:</strong> ${esc(publication.title || '')}${publication.venue ? ` · ${esc(publication.venue)}` : ''}${publication.url ? ` <a href="${esc(publication.url)}">${esc(publication.doi || 'View publication')}</a>` : ''}</p>` : ''}

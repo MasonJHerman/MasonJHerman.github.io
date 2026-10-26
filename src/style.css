@@ -802,3 +802,41 @@ footer a:hover {
   font-weight: 700;
   color: #292d33;
 }
+
+/* About page */
+.about-page { max-width: 920px; padding: 74px 0 100px; }
+.about-intro { padding-bottom: 34px; border-bottom: 1px solid #c6c4bf; }
+.about-intro h1 { max-width: 880px; font-size: clamp(34px, 4.5vw, 54px); line-height: 1.15; letter-spacing: -0.035em; margin: 18px 0 24px; }
+.about-lead { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.6; color: #4b535c; max-width: 800px; }
+.about-section { padding-top: 35px; max-width: 780px; }
+.about-section h2 { font-size: 23px; margin: 0 0 17px; letter-spacing: -0.02em; }
+.about-section p { font-size: 17px; line-height: 1.8; color: #4b535c; margin: 0 0 18px; }
+.about-contact { margin-top: 38px; }
+@media (max-width: 700px) { .about-page { padding: 42px 0 64px; } .about-section { padding-top: 27px; } .about-section p { font-size: 16px; } }
+
+
+.lead + .lead {
+  margin-top: 16px;
+}
+
+
+/* Professional links and resume page */
+.professional-links { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.professional-links a { display: inline-flex; align-items: center; border: 1px solid #c6c4bf; border-radius: 7px; padding: 9px 14px; color: #292d33; text-decoration: none; font-size: 14px; font-weight: 600; transition: background .15s, border-color .15s; }
+.professional-links a:hover { background: #f2f1ed; border-color: #85878a; }
+.hero-actions, .resume-actions, .about-connect-links { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+.hero-actions { margin-top: 24px; }
+.about-connect { border-top: 1px solid #c6c4bf; margin-top: 38px; padding-top: 28px; }
+.about-connect h2 { font-size: 23px; margin: 0 0 12px; }
+.about-connect p { color: #4b535c; margin: 0 0 18px; }
+.resume-intro { padding-bottom: 32px; }
+.resume-subtitle { font-weight: 600; color: #4b535c; }
+.resume-actions { margin-top: 24px; }
+.resume-download { display: inline-flex; padding: 11px 17px; border-radius: 7px; background: #292d33; color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; }
+.resume-download:hover { background: #454a52; }
+.resume-file-note { font-size: 13px !important; color: #6c7176; margin-top: 16px; }
+.resume-preview { margin-bottom: 80px; }
+.resume-preview h2 { font-size: 22px; margin-bottom: 18px; }
+.resume-preview iframe { width: 100%; min-height: 760px; border: 1px solid #c6c4bf; border-radius: 8px; background: #f6f6f6; }
+.resume-preview > p { color: #6c7176; font-size: 13px; }
+@media (max-width: 700px) { .hero-actions, .resume-actions, .about-connect-links { align-items: flex-start; flex-direction: column; } .resume-preview iframe { min-height: 520px; } }
