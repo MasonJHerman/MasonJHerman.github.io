@@ -208,18 +208,19 @@ main {
 .case-study {
   width: 100%;
   max-width: 1100px;
-  margin: 70px auto 105px; 
-  .case-study p,
-  .case-study li {
-  max-width: 800px;
-  }
-  .case-study img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
+  margin: 70px auto 105px;
 }
 
+.case-study p,
+.case-study li {
+  max-width: 800px;
+}
+
+.case-study img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .case-study h1 {
   font-size: clamp(38px, 4.5vw, 56px);
@@ -423,4 +424,381 @@ footer a:hover {
     color: black;
     text-decoration: none;
   }
+}
+
+/* Project imagery and published research */
+.project-row.has-image {
+  grid-template-columns: 45px minmax(0, 1fr) 200px 24px;
+  align-items: center;
+}
+
+.project-thumb {
+  display: block;
+  width: 200px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #d1cec8;
+}
+
+.case-hero {
+  margin: 35px 0 45px;
+}
+
+.case-hero img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  background: #e9e7e2;
+  border-radius: 5px;
+}
+
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.figure-grid figure {
+  margin: 0;
+}
+
+.figure-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #e9e7e2;
+  border: 1px solid #d1cec8;
+  border-radius: 4px;
+}
+
+.figure-grid figcaption {
+  color: #626870;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-top: 10px;
+}
+
+.publication,
+.paper-link {
+  border-top: 1px solid #c6c4bf;
+  border-bottom: 1px solid #c6c4bf;
+  padding: 30px 0 35px;
+  margin-bottom: 75px;
+}
+
+.publication h2,
+.paper-link h2 {
+  font-size: 25px;
+  line-height: 1.35;
+  max-width: 850px;
+  margin: 12px 0;
+}
+
+.publication p,
+.paper-link p {
+  color: #555c64;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .project-row.has-image {
+    grid-template-columns: 35px minmax(0, 1fr) 135px 24px;
+  }
+  .project-thumb {
+    width: 135px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-row.has-image {
+    grid-template-columns: 28px minmax(0, 1fr) 20px;
+  }
+  .project-row.has-image .project-thumb {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    max-width: 280px;
+    height: 140px;
+  }
+  .figure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .publication,
+  .paper-link,
+  .figure-grid figure {
+    break-inside: avoid;
+  }
+}
+
+
+/* -------------------------------------------------------
+   Project case studies: alternating text and image sections
+   ------------------------------------------------------- */
+
+.project-story {
+  margin-top: 32px;
+}
+
+.story-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 68px);
+  padding: 42px 0;
+  border-bottom: 1px solid #d1cec8;
+}
+
+/* Sections with no image use the full width for readable text. */
+.story-section:not(.has-media) {
+  display: block;
+}
+
+.story-section:not(.has-media) .story-copy {
+  max-width: 800px;
+}
+
+.story-section.image-left {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+
+.story-section.image-left .story-media {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.story-section.image-left .story-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.story-copy h2 {
+  margin: 0 0 20px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.story-copy p,
+.story-copy ul,
+.story-copy ol {
+  margin: 0;
+}
+
+.story-copy ul,
+.story-copy ol {
+  padding-left: 22px;
+}
+
+.story-copy li + li {
+  margin-top: 12px;
+}
+
+.story-media {
+  min-width: 0;
+}
+
+.story-figure {
+  margin: 0;
+}
+
+.story-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 370px;
+  object-fit: contain;
+  background: #e9e7e2;
+  border: 1px solid #d1cec8;
+  border-radius: 5px;
+}
+
+.story-figure figcaption {
+  max-width: 100%;
+  margin-top: 10px;
+  color: #626870;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.extra-documentation {
+  margin: 52px 0;
+}
+
+.extra-documentation h2 {
+  margin: 0 0 20px;
+}
+
+.extra-documentation .figure-grid {
+  margin-top: 0;
+}
+
+/* Stack each photo immediately after its related text on mobile. */
+@media (max-width: 800px) {
+  .story-section,
+  .story-section.image-left {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 35px 0;
+  }
+
+  .story-copy h2 {
+    font-size: 24px;
+  }
+
+  .story-figure img {
+    max-height: 420px;
+  }
+}
+
+@media print {
+  .story-section,
+  .story-section.image-left {
+    break-inside: avoid;
+    gap: 15px;
+    padding: 12px 0;
+  }
+
+  .story-figure img {
+    max-height: 220px;
+  }
+}
+
+/* Compact project story layout */
+
+.story-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: start;
+  gap: 48px;
+  margin: 0;
+  padding: 38px 0;
+  border-bottom: 1px solid #d1cec8;
+}
+
+.story-copy {
+  align-self: start;
+}
+
+.story-copy h2 {
+  margin: 0 0 20px;
+}
+
+.story-copy p,
+.story-copy ul,
+.story-copy ol {
+  margin-top: 0;
+}
+
+.story-media {
+  align-self: start;
+  min-width: 0;
+}
+
+.story-figure {
+  margin: 0;
+}
+
+.story-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+}
+
+.story-figure figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #626870;
+}
+
+/* Alternate image placement */
+
+.story-section.image-left .story-media {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.story-section.image-left .story-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .story-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .story-section.image-left .story-copy,
+  .story-section.image-left .story-media {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .story-copy {
+    order: 1;
+  }
+
+  .story-media {
+    order: 2;
+  }
+
+  .story-figure img {
+    max-height: 320px;
+  }
+}
+
+/* Portrait image sizing */
+
+.story-figure img[src*="WTFinalProject"] {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-section {
+  padding: 32px 0;
+  gap: 40px;
+  align-items: start;
+}
+
+.story-copy h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.story-copy p,
+.story-copy li {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.story-copy li {
+  margin-bottom: 10px;
+}
+
+.story-figure img {
+  max-height: 380px;
+  object-fit: contain;
+}
+
+/* Bold engineering process numbers */
+.story-copy ol > li::marker {
+  font-weight: 700;
+  color: #292d33;
 }
